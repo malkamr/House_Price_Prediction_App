@@ -86,6 +86,10 @@ house-price-project/
 │   ├── public/locations.json
 │   ├── package.json
 │   └── .env.example
+├── Screenshots/
+|   ├── frontend
+│   ├── backend
+│   └── notebook
 ├── .gitignore
 └── README.md
 ```
@@ -207,17 +211,4 @@ every metric because it can capture the non-linear way location, area and amenit
 interact to set a price. See the notebook for the full comparison, the
 predicted-vs-actual plot, and the 5-fold cross-validation score.
 
-## Screenshots
 
-_Add screenshots of the running form and result page here once you've run the app
-locally (`npm run dev` + `uvicorn app.main:app --reload`)._
-
-## Common pitfalls (from the project guide)
-
-- Don't commit `.env` or the raw dataset CSV.
-- Pin your backend's scikit-learn version to the one that trained the pickle
-  (`1.8.0` here — check with `python -c "import sklearn; print(sklearn.__version__)"`
-  after training on your machine).
-- Report metrics on the **test set**, not the training set.
-- Use the `VITE_API_BASE_URL` env variable in the frontend instead of hard-coding
-  `http://localhost:8000`.
