@@ -44,6 +44,76 @@ dedicated markdown cell in the notebook for the implementation.
                                                                                  └───────────────┘
 ```
 
+## How to Run
+
+### 1. Train the Model (Optional)
+
+Open the notebook and run all cells to generate the exported model:
+
+```bash
+cd notebooks
+```
+
+Run:
+
+```text
+house_price_model.ipynb
+```
+
+This generates:
+
+```text
+house_price.pkl
+locations.json
+```
+
+---
+
+### 2. Start the Backend
+
+Open a terminal:
+
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+
+Backend will be available at:
+
+```text
+http://localhost:8000
+http://localhost:8000/docs
+```
+
+---
+
+### 3. Start the Frontend
+
+Open another terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend will be available at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+### 4. Open the Application
+
+1. Open `http://localhost:5173`
+2. Fill in the property details.
+3. Click **Predict**.
+4. View the estimated house price and confidence range.
+
+
 ## Tech stack
 
 - **Modeling:** Python, pandas, scikit-learn (`Pipeline` + `ColumnTransformer`), matplotlib, seaborn, joblib
